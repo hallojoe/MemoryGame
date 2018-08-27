@@ -51,7 +51,7 @@
       }
     }
     // create game
-    _game = new MemoryGameEngine(containerElement, _cards, +resetDelayElement.value, +levelElement.value);
+    _game = new MemoryGameEngine(containerElement, _cards, +resetDelayElement.value, +levelElement.value, 'board');
     // subscribe (note: options are created, started, over)
     _game.container.addEventListener('mge:over', (e) => {
       // set results
