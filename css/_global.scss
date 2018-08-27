@@ -1,0 +1,60 @@
+:root {
+  --columns: 4;
+  --guttter: 1em;
+  --font-size: 12px;
+  --container-width: 100%;
+  --bg: #fff; 
+}
+@media only screen and (min-width: 768px) {
+  :root {
+    --container-width: 768px;
+    --font-size: 16px;
+  }
+}
+@keyframes in {
+  from {
+      transform: rotateY(0deg);
+      opacity:0;
+  }
+  to {
+      transform: rotateY(360deg);
+      opacity:1;
+  }
+}
+@keyframes out {
+  from {
+      transform: rotateY(0deg);
+      opacity: 0;
+  }
+  to {
+      transform: rotateY(360deg);
+      opacity: 1;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+  background-color: var(--bg);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  padding:0;
+  margin:0;
+}
+h1, h2 {
+  font-size: 1.5em;
+  font-weight: normal; 
+  padding:0;
+  margin:1em auto;
+  text-align: center;
+  &+p {
+    text-align: center;
+  }
+}
+header, footer {
+  text-align: center;
+}
+.container {
+  width: var(--container-width);
+  margin:0 auto;
+}

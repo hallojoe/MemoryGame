@@ -1,0 +1,36 @@
+
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  margin-bottom: 1em; 
+  border: 1px none #ccc;
+  border-bottom-style: solid;     
+  label {
+    small {
+      display:block;
+    }  
+  }
+  input {
+    border:1px solid rgb(143, 143, 143);
+    padding:5px;
+    border-radius: 3px;
+    &:hover {
+      border-color:#555;
+    }
+  }
+  input[type='file'] {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    &+label {
+      display: inline-block;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

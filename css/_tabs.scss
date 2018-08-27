@@ -1,0 +1,38 @@
+/**
+ * Tabs
+ */
+ .tabs {
+  display: flex;
+  flex-wrap: wrap; // make sure it wraps
+  align-items: center;
+  justify-content: center;  
+  &>label {
+    order: 1; 
+    justify-content: space-evenly;
+    display: block;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: all ease 0.2s;    
+    padding:.5em;
+    color:blue;
+  }
+  .tab {
+    order: 99;
+    flex-grow: 1;
+    width: 100%;
+    display: none;
+    padding: 1rem;
+    background: #fff;
+  }
+  input[type='radio'] {
+    display: none;
+    &:checked + label {
+      text-decoration: underline;            
+      &+.tab {
+          display: block;
+        }
+      }
+    
+  }
+}
+

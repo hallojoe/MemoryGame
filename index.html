@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>MemoryGame</title>
+  <script src="/node_modules/memorygameengine/dist/memorygameengine.min.js"></script>  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⌘ MemoryGame</h1>
+      <p>A memory game based on <a href="#" title="MemoryGameEngine">MemoryGameEngine</a></p>    
+    </header>
+    <main class="tabs">
+      <input type="radio" name="tabs" id="tab-game">
+      <label for="tab-game">Start new game</label>
+      <div class="tab">
+        <section id="game">     
+          <div id="result" class="result">
+              <h2>You completed 🙋 Yay!</h2>
+              <p>
+                  Attempts: <span id="attempts"></span>
+              <br>
+                Time: <span id="timetaken"></span>
+              </p>
+          </div>            
+          <div id="memorygame"></div>
+        </section>
+      </div>
+      <input type="radio" name="tabs" id="tab-settings" checked="checked">
+      <label for="tab-settings">Settings</label>
+      <div class="tab">
+        <section id="settings">
+    
+          <div class="form-control">
+            <div>
+              <label for="resetdelay">Resetdelay<small>The amount of milliseconds that elapse before picked card close(unless you beat it to it). A value of 0 will close cards on next click.</small></label>
+            </div>
+            <div>
+              <input id="resetdelay" type="number" min="0" max="10000" value="0" step="100">
+            </div>
+          </div>
+        
+          <div class="form-control">
+            <div>
+              <label for="level">Level <small>The factor to duplicate items by.</small></label>
+            </div>
+            <div>
+              <input id="level" type="number" min="2" max="5" value="2" step="1">
+            </div>
+          </div>
+        
+          <div class="form-control">
+            <div>
+              <label for="files">Images <small>Select local pictures for cards.</small></label>    
+            </div>
+            <div>
+              <input id="files" type="file" name="files[]" multiple  />
+              <label for="files">Select</label>    
+            </div>
+          </div>
+        
+          <div id="imagelist" class="board inactive"></div>
+                    
+        </section>
+      </div>            
+    </div>            
+  </main>
+  <footer><p>Check it out on <a href="https://github.com/hallojoe/MemoryGame" title="MemoryGame on GitHub">GitHub</a></p></footer>
+  <script src="/js/game.1.js"></script>  
+</body>
+</html>
