@@ -18,7 +18,7 @@
     "pump": "^3.0.0"
   },
   "dependencies": {
-    "memorygameengine": "^1.0.0"
+    "memorygameengine": "^1.0.1"
   },
   "repository": {
     "type": "git",
